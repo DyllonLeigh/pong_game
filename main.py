@@ -6,14 +6,15 @@ from paddle import Paddle
 screen = Screen()
 screen.title("Pong")
 screen.bgcolor("black")
-screen.tracer(0)
+# screen.tracer(0)
+# screen.update()
 
-def test():
-    print("a")
-
-screen.listen()
-screen.onkey(test, "a")
-
-screen.update()
+player = Paddle()
+ai = Paddle()
+scoreboard = Scoreboard()
+ball = Ball()
 
 screen.exitonclick()
+
+# screen.listen()
+# screen.onkey(test, "a")
